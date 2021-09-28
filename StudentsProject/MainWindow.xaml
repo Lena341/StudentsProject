@@ -1,0 +1,50 @@
+﻿<Window x:Class="StudentsProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentsProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="470" Width="600" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="64,65,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="firstName" HorizontalAlignment="Left" Height="23" Margin="156,69,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="317,69,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="lastName" HorizontalAlignment="Left" Height="23" Margin="413,72,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Name="stdSemester" HorizontalAlignment="Left" Margin="156,111,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Name="stdDirection" HorizontalAlignment="Left" Margin="377,111,0,0" VerticalAlignment="Top" Width="156"/>
+        <Button x:Name="insertStudent" Content="Insert" HorizontalAlignment="Left" Margin="79,175,0,0" VerticalAlignment="Top" Width="75" Height="36" Click="insertStudent_Click"/>
+        <Button x:Name="updateStudent" Content="Update" HorizontalAlignment="Left" Margin="201,175,0,0" VerticalAlignment="Top" Width="75" Height="36" Click="updateStudent_Click"/>
+        <Button x:Name="deleteStudent" Content="Delete" HorizontalAlignment="Left" Margin="330,175,0,0" VerticalAlignment="Top" Width="75" Height="36" Click="deleteStudent_Click"/>
+        <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Left" Margin="458,175,0,0" VerticalAlignment="Top" Width="75" Height="36" Click="clearButton_Click"/>
+        <ListView x:Name="studentsList" HorizontalAlignment="Left" Height="178" Margin="64,253,0,0" VerticalAlignment="Top" Width="443">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Width="75" Header="Name" DisplayMemberBinding="{Binding Path=Name}"/>
+                        <GridViewColumn Width="110" Header="Last Name" DisplayMemberBinding="{Binding Path=LastName}"/>
+                        <GridViewColumn Width="75" Header="Semester" DisplayMemberBinding="{Binding Path=Semester}"/>
+                        <GridViewColumn Width="110" Header="Direction" DisplayMemberBinding="{Binding Path=Direction}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <DockPanel x:Name="dockPanel1" HorizontalAlignment="Stretch" Height="46" LastChildFill="False" Margin="0,0,0.333,0" VerticalAlignment="Top" Width="Auto">
+            <Menu x:Name="menu1" Height="22" VerticalAlignment="Top" Width="Auto" DockPanel.Dock="Top" HorizontalAlignment="Stretch">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New Student" Name="newStudent" Click="newStudent_Click"/>
+                    <Separator/>
+                    <MenuItem Header="_Exit" Name="exit" Click="exit_Click"/>
+                </MenuItem>
+                <MenuItem Header="_About">
+                    <MenuItem Header="_About the application" Name="about" Click="about_Click"/>
+                </MenuItem>
+
+
+            </Menu>
+        </DockPanel>
+        
+
+
+    </Grid>
+</Window>

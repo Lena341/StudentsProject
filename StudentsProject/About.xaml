@@ -1,0 +1,19 @@
+﻿<Window x:Class="StudentsProject.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentsProject"
+        mc:Ignorable="d"
+        Title="About" Height="156" Width="300" ResizeMode="NoResize" Name="aboutTheApp">
+    <Grid>
+        <Label Margin="80,20,0,0" Name="author" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85">
+            Eleni Kartsakli
+        </Label>
+        <Label Margin="80,50,0,0" Name="builtData" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="160">
+            Built Date: September 2021
+        </Label>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="100,85,0,0" VerticalAlignment="Top" Width="78" Height="23" Click="Button_Click"/>
+
+    </Grid>
+</Window>
